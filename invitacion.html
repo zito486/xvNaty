@@ -57,21 +57,33 @@
       height: 100vh;
       width: 100%;
       display: none;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      padding: 20px;
       color: white;
       text-align: center;
       background-color: rgba(0, 0, 0, 0.5);
       background-blend-mode: darken;
+      overflow-y: auto;
     }
 
-    h1 {
+    .invitacion h1 {
       font-size: 3em;
+      margin-bottom: 0.5em;
     }
 
-    p {
-      font-size: 1.2em;
+    .invitacion p {
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    .invitacion img {
+      max-width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -87,6 +99,8 @@
     <h1>Mis XV Años</h1>
     <p>Estás cordialmente invitado a una noche inolvidable</p>
     <p>Próximamente más detalles</p>
+    <!-- Imagen de ejemplo -->
+    <img src="https://dy9ihb9itgy3g.cloudfront.net/products/$uploads/products/10407/34101/34101__d_f.webp" alt="Quinceañera de ejemplo">
   </div>
 
   <!-- Audio -->

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación XV Años</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .pantalla-inicial {
+      background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: darken;
+    }
+
+    .titulo-xv {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .titulo-xv:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 20px #fff8dc;
+    }
+
+    .texto-bienvenida {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .invitacion {
+      background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: darken;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Pantalla inicial -->
+  <div class="pantalla-inicial" id="pantallaInicial">
+    <div class="titulo-xv" id="tituloXv">XV Naty</div>
+    <div class="texto-bienvenida">Haz clic para ver la invitación</div>
+  </div>
+
+  <!-- Invitación -->
+  <div class="invitacion" id="invitacion">
+    <h1>Mis XV Años</h1>
+    <p>Estás cordialmente invitado a una noche inolvidable</p>
+    <p>Próximamente más detalles</p>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    const tituloXv = document.getElementById('tituloXv');
+    const pantallaInicial = document.getElementById('pantallaInicial');
+    const invitacion = document.getElementById('invitacion');
+    const bgMusic = document.getElementById('bgMusic');
+
+    tituloXv.addEventListener('click', () => {
+      pantallaInicial.style.display = 'none';
+      invitacion.style.display = 'flex';
+
+      bgMusic.play().catch(err => {
+        console.warn("No se pudo reproducir el audio automáticamente:", err);
+      });
+    });
+  </script>
+</body>
+</html>

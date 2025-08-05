@@ -1,128 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitación XV Años</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .pantalla-inicial {
-      background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center fixed;
-      background-size: cover;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-blend-mode: darken;
-    }
-
-    .titulo-xv {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4em;
-      color: #fff;
-      cursor: pointer;
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    .titulo-xv:hover {
-      transform: scale(1.05);
-      text-shadow: 0 0 20px #fff8dc;
-    }
-
-    .texto-bienvenida {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-
-    .invitacion {
-      background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center fixed;
-      background-size: cover;
-      height: 100vh;
-      width: 100%;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      color: white;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      background-blend-mode: darken;
-      overflow-y: auto;
-    }
-
-    .invitacion h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-
-    .invitacion p {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-    }
-
-    .invitacion img {
-      max-width: 350px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Invitación XV Años - Naty</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body, html {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    background-color: #000;
+    color: white;
+  }
+  .pantalla-inicial {
+    background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5); background-blend-mode: darken;
+  }
+  .titulo-xv {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  .titulo-xv:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px #fff8dc;
+  }
+  .invitacion {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: url('https://img.freepik.com/premium-photo/swamp-filled-with-lots-water-lots-fireflies-generative-ai_899870-263.jpg') no-repeat center center/cover;
+    background-color: rgba(0,0,0,0.5); background-blend-mode: darken;
+  }
+  h1, h2 { font-family: 'Great Vibes', cursive; }
+  section {
+    background-color: rgba(0,0,0,0.6);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+  }
+  a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  .countdown {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+</style>
 </head>
 <body>
-  <!-- Pantalla inicial -->
-  <div class="pantalla-inicial" id="pantallaInicial">
-    <div class="titulo-xv" id="tituloXv">XV Naty</div>
-    <div class="texto-bienvenida">Haz clic para ver la invitación</div>
-  </div>
 
-  <!-- Invitación -->
-  <div class="invitacion" id="invitacion">
+<!-- Pantalla inicial -->
+<div class="pantalla-inicial" id="pantallaInicial">
+  <div class="titulo-xv" id="tituloXv">XV Naty</div>
+  <div>Haz clic para entrar</div>
+</div>
+
+<!-- Invitación -->
+<div class="invitacion" id="invitacion">
+  <section>
     <h1>Mis XV Años</h1>
     <p>Estás cordialmente invitado a una noche inolvidable</p>
-    <p>Próximamente más detalles</p>
-    <!-- Imagen de ejemplo -->
-    <img src="https://dy9ihb9itgy3g.cloudfront.net/products/$uploads/products/10407/34101/34101__d_f.webp" alt="Quinceañera de ejemplo">
-  </div>
+    <img src="image1.jpeg" alt="Naty">
+  </section>
 
-  <!-- Audio -->
-  <audio id="bgMusic" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-  </audio>
+  <section>
+    <h2>📅 Falta para el gran día</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
 
-  <script>
-    const tituloXv = document.getElementById('tituloXv');
-    const pantallaInicial = document.getElementById('pantallaInicial');
-    const invitacion = document.getElementById('invitacion');
-    const bgMusic = document.getElementById('bgMusic');
+  <section>
+    <h2>📌 Ubicación</h2>
+    <p><a href="https://maps.app.goo.gl/J8UPmSWk6oKtNc8dA" target="_blank">Ver en Google Maps</a></p>
+  </section>
 
-    tituloXv.addEventListener('click', () => {
-      pantallaInicial.style.display = 'none';
-      invitacion.style.display = 'flex';
+  <section>
+    <h2>📲 Confirmar asistencia</h2>
+    <p><a href="https://wa.me/528443313377?text=Confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Naty" target="_blank">Enviar mensaje por WhatsApp</a></p>
+  </section>
 
-      bgMusic.play().catch(err => {
-        console.warn("No se pudo reproducir el audio automáticamente:", err);
-      });
-    });
-  </script>
+  <section>
+    <h2>🎁 Mesa de regalos</h2>
+    <p><a href="https://www.liverpool.com.mx" target="_blank">Liverpool</a></p>
+    <p><a href="https://www.amazon.com.mx" target="_blank">Amazon</a></p>
+  </section>
+
+  <section>
+    <h2>📷 Álbum digital</h2>
+    <p><a href="https://drive.google.com" target="_blank">Ver fotos</a></p>
+  </section>
+
+  <section>
+    <h2>👭 Padres</h2>
+    <p>Padres: Abraham Reynosa y Laura Flores</p>
+  </section>
+
+  <section>
+    <h2>#⃣ Hashtag</h2>
+    <p>#XVNaty2025</p>
+  </section>
+
+  <section>
+    <h2>🖋 Generales del evento</h2>
+    <p>Fecha: 03 de Octubre de 2025</p>
+    <p>Hora: 6:30 PM</p>
+    <p>Lugar: Villas Santa Fe</p>
+  </section>
+</div>
+
+<!-- Audio -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const tituloXv = document.getElementById('tituloXv');
+  const pantallaInicial = document.getElementById('pantallaInicial');
+  const invitacion = document.getElementById('invitacion');
+  const bgMusic = document.getElementById('bgMusic');
+
+  tituloXv.addEventListener('click', () => {
+    pantallaInicial.style.display = 'none';
+    invitacion.style.display = 'flex';
+    bgMusic.play().catch(err => console.warn("No se pudo reproducir audio:", err));
+  });
+
+  // Cuenta regresiva
+  const countdownElement = document.getElementById("countdown");
+  const eventDate = new Date("October 3, 2025 18:30:00").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    if (distance < 0) {
+      countdownElement.innerHTML = "¡El gran día ha llegado!";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
+
 </body>
 </html>
